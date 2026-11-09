@@ -3,9 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tour Femmes - Classificação</title>
+    <style>
+        /* Aqui vem o CSS*/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #f7f8f1;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 90px;
+            background: #26311a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            transition: height 0.4s;
+            z-index: 10;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>
+    <nav id="navBar">
+        <div class="logo">Le Tour Femmes</div>
+        <div>
+            <a href="#classificacao">Classificação</a>
+            <a href="#graficos">Gráficos</a>
+            <a href="#sobre">Sobre</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <div>
+            <h1>General Classification</h1>
+            <p>Classificação após a etapa 6</p>
+            <a href="#classificacao">Ver Classificação</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="classificacao">
+            <h2>Classificação Geral</h2>
+            <p>Clica num ciclista paa ver os seus detalhes</p>
+            <div class="tabela-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Nome</th>
+                            <th>Equipa</th>
+                            <th>Tempo</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-card">
+            <button id="fechar">x</button>
+        </div>
+    </div>
+
+
 </body>
+<script>
+    //Aqui vem o javascript
+    const navBar = document.getElementById('navBar');
+
+    window.addEventListener('scroll', () => {
+        if(window.scrllY > 50) {
+            console.log("No topo")
+        }else {
+            console.log("Fora do topo")
+        }
+    })
+</script>
 </html>
